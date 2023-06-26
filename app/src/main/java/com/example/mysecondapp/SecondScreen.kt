@@ -40,7 +40,7 @@ class SecondScreen : AppCompatActivity() {
 
         val Email = intent.getStringExtra("email")
 
-        userEmail.text = "Hello" + Email
+        userEmail.text = "Hello  " + Email
 
         setSupportActionBar(binding.toolbar)
 

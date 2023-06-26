@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,19 @@
     android:background="@color/design_default_color_secondary_variant"
     android:fitsSystemWindows="true"
     tools:context=".SecondScreen">
-
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="1125dp"
         android:background="@color/design_default_color_secondary_variant"
         android:fitsSystemWindows="true">
 
@@ -21,9 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
-<!--        <ScrollView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content" />-->
 
         <TextView
             android:id="@+id/tv_hello"
@@ -32,19 +38,13 @@
             android:layout_margin="9dp"
             android:text="Hello"
             android:textColor="@color/black" />
-        <!--        <TextView-->
-        <!--            android:id="@+id/tvName"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text=""-->
-        <!--            android:textColor="@color/black"/>-->
 
         <TextView
             android:id="@+id/QueOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What is your Favourite food?"
             android:layout_margin="9dp"
+            android:text="What is your Favourite food?"
             android:textColor="@color/black" />
 
         <CheckBox
@@ -91,25 +91,25 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/QueTwo"
+            android:id="@+id/Qtwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="9dp"
             android:text="What is your favourite profession?"
-            android:layout_margin="9dp"
             android:textColor="@color/black" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="9dp"
             android:text="Doctor"
-            android:layout_margin="9dp"
             android:textColor="@color/black" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Artist"
             android:layout_margin="9dp"
+            android:text="Artist"
             android:textColor="@color/black" />
 
         <CheckBox
@@ -136,33 +136,34 @@
 
         <TextView
             android:id="@+id/QueThr"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="What is your favourite destination?"
+            android:layout_margin="9dp"
             android:textColor="@color/black" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GrandCanyon" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="9dp"
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DisneyWorld" />
 
-            android:text="GrandCanyon" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Niagara" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="9dp"
-            android:text="DisneyWorld" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Niagara" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="NewYork" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NewYork" />
+        </RadioGroup>
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -181,5 +182,6 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
